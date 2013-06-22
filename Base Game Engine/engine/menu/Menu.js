@@ -24,7 +24,7 @@
 
     menu_itemFunction("Play", "play");
     menu_itemFunction("Tutorial", "tutorial");
-    menu_itemFunction("Load Game", "load");
+    menu_itemFunction("Load", "load");
     menu_itemFunction("Options", "options");
     menu_itemFunction("Gallery", "gallery");
     titleFunction("GameTemp");
