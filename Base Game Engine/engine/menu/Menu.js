@@ -1,22 +1,32 @@
 ﻿$(function () {
     function titleFunction(title) {
-        
-        $("#title").html(title);
+
+        $("#title").html("<h1>"+title+"</h1>");
     }
-    function menuFunction(newitem,olditem,button) {
-        $(newitem).hide();
+    function menuFunction(newitem, olditem, button) {
+        $("#"+newitem).hide();
         $("#exit").hide();
-        $(button).click(function () {
-            $(olditem).hide();
-            $(newitem).show();
+        $("#" + button).click(function () {
+            $("#" + olditem).hide();
+            $("#" + newitem).show();
             $("#exit").show();
         });
         $("#exit").click(function () {
-            $(olditem).show();
-            $(newitem).hide();
+            $("#" + olditem).show();
+            $("#" + newitem).hide();
             $("#exit").hide();
         });
     }
-    titleFunction( "<h1>GameTemp</h1>");
-    menuFunction("#myCanvas", "#menu", "#test");
+    function menu_itemFunction(menu_item, tag) {
+
+        $("#menu").append("<li><button id=\"" + tag + "\">" + menu_item + "</button></li>");
+    }
+
+    menu_itemFunction("Play", "play");
+    menu_itemFunction("Tutorial", "tutorial");
+    menu_itemFunction("Load Game", "load");
+    menu_itemFunction("Options", "options");
+    menu_itemFunction("Gallery", "gallery");
+    titleFunction("GameTemp");
+    menuFunction("myCanvas", "menu", "play");
 });
