@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Base_Game_Engine</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.1.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.1.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.1.0/js/ui.js"></script>
+
+    <!-- Base_Game_Engine references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/engine/createjs-2013.05.14.min.js"></script>
+    <script src="/engine/underscore.js"></script>
+    <script src="/engine/jquery.min.js"></script>
+    <script src="/js/default.js"></script>
+</head>
+<body>
+    <div id="title"></div>
+    <ul id="menu">
+        <li><button id="test">Play Game</button></li>
+        <li><button>Load Game</button></li>
+        <li><button>Tutorial</button></li>
+        <li><button>Options</button></li>
+        <li><button>Gallery</button></li>
+        
+    </ul>
+    <canvas id="myCanvas" width="500" height="500">
+        Alternative Content
+    </canvas>
+<button id="exit">Exit</button>
+</body>
+    <!-- Menu Imports -->
+ <script src="/engine/menu/Menu.js"></script>
+<!-- Game Imports -->
+<script src="/engine/core/Object.js"></script>
+<script src="/engine/core/Transform.js"></script>
+<script src="/engine/core/GameObject.js"></script>
+<script src="/js/main.js"></script>
+</html>
