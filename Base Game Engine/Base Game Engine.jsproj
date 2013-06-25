@@ -55,15 +55,23 @@
     </AppxManifest>
     <Content Include="assets\daisy.png" />
     <Content Include="assets\pop.mp3" />
+    <Content Include="assets\sewer_tileset.png" />
+    <Content Include="assets\xmldoc.xml">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="default.html" />
     <Content Include="engine\core\GameObject.js" />
+    <Content Include="engine\core\level\Level.js" />
+    <Content Include="engine\core\level\LevelParser.js" />
+    <Content Include="engine\core\level\TileSet.js" />
     <Content Include="engine\createjs-2013.05.14.min.js" />
     <Content Include="engine\core\Object.js">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Content>
     <Content Include="engine\core\Transform.js" />
+    <Content Include="engine\jquery-2.0.2.js" />
     <Content Include="engine\menu\Menu.js" />
-    <Content Include="engine\jquery.min.js" />
     <Content Include="engine\underscore.js" />
     <Content Include="images\logo.png" />
     <Content Include="images\smalllogo.png" />
@@ -72,6 +80,7 @@
     <Content Include="js\default.js" />
     <Content Include="css\default.css" />
     <Content Include="js\main.js" />
+    <Content Include="scripts\_referances.js" />
     <None Include="Base Game Engine_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
