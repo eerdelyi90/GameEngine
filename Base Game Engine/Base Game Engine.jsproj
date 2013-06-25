@@ -64,6 +64,7 @@
     <Content Include="engine\core\GameObject.js" />
     <Content Include="engine\core\level\Level.js" />
     <Content Include="engine\core\level\LevelParser.js" />
+    <Content Include="engine\core\level\Scroller.js" />
     <Content Include="engine\core\level\TileSet.js" />
     <Content Include="engine\core\CanvasMethods.js" />
     <Content Include="engine\createjs-2013.05.14.min.js" />

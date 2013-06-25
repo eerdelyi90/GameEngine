@@ -5,7 +5,8 @@ var queue;
     window.addEventListener('resize', resize, false);
     stage.canvas.width = window.innerWidth;
     stage.canvas.height = window.innerHeight;
-
+    var level = new Engine.Level("assets/xmldoc.xml");
+    level.show();
     var apple = new Engine.GameObject();
     apple.addAudio('pop.mp3');
     apple.setStaticSprite('daisy.png');
@@ -17,8 +18,7 @@ var queue;
 
     doShit();
 
-    var level = new Engine.Level("assets/xmldoc.xml");
-    level.show();
+  
     //var levelParser = new Engine.LevelParser();
     //levelParser.parse("assets/xmldoc.xml");
 
