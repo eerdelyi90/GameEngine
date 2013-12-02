@@ -52,7 +52,25 @@ Engine.Level = (function () {
                     currentTileImage.sourceRect = new createjs.Rectangle(sourceX * currentTileset.tileWidth, sourceY * currentTileset.tileHeight, tileWidth, tileHeight);
                     currentTileImage.x = destX;
                     currentTileImage.y = destY;
-                    stage.addChild(currentTileImage);
+                    currentTileImage.snapToPixel = false;
+                    tileCoordinates[layerNumber][spriteForX][spriteForY] = currentTileImage;
+                    stage.addChild(tileCoordinates[layerNumber][spriteForX][spriteForY]);
+                }
+            }
+        }
+    }
+
+    function zoom(zoomAmount) {
+        if (!_.isNumber(zoomAmount)) {
+            throw "zoomAmount is not a number";
+        }
+        for (var layerNumber = 0; layerNumber < tileCoordinates.length; layerNumber++) {
+            for (var spriteForX = 0; spriteForX < mapWidth; spriteForX++) {
+                for (var spriteForY = 0; spriteForY < mapHeight; spriteForY++) {
+                    tileCoordinates[layerNumber][spriteForX][spriteForY].scaleX = zoomAmount;
+                    tileCoordinates[layerNumber][spriteForX][spriteForY].scaleY = zoomAmount;
+                    tileCoordinates[layerNumber][spriteForX][spriteForY].x *= zoomAmount;
+                    tileCoordinates[layerNumber][spriteForX][spriteForY].y *= zoomAmount;
                 }
             }
         }
@@ -60,5 +78,6 @@ Engine.Level = (function () {
 
     Level.prototype = new Engine.Object();
     Level.prototype.show = show;
+    Level.prototype.zoom = zoom;
     return Level;
 })();
